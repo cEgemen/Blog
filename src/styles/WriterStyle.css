@@ -1,0 +1,18 @@
+.Writer-Root{
+     height: 90vh;
+}
+
+.Writer-div {
+     width: 80%;
+     margin: auto;    
+    }
+
+.Writer-Container{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Writer-Shadow{
+    box-shadow: 0px 2px 6px gray;
+}
