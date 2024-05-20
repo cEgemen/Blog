@@ -3,16 +3,25 @@ import formHook from "../../../hooks/formHook"
 export default ({props,deleteUser,editUser}) => {
         const [isEdit,changeEditState] = toggleHook(false)
         const {firstName,lastName,email,password,gender,birtday,educationState,index,id,userType} = props;
-        const [firstNameData,changeFirstNameData]  = formHook(firstName);
-        const [lastNameData,changeLastNameData]  = formHook(lastName);
-        const [genderData,changeGenderData]  = formHook(gender);
-        const [birtdayData,changeBirtdayData]  = formHook(birtday);
-        const [educationStateData,changeEducationStateData]  = formHook(educationState);
+        const [firstNameData,changeFirstNameData,,changeNormalFirstNameData]  = formHook(firstName);
+        const [lastNameData,changeLastNameData,,changeNormalLastNameData]  = formHook(lastName);
+        const [genderData,changeGenderData,,changeNormalGenderData]  = formHook(gender);
+        const [birtdayData,changeBirtdayData,,changeNormalBirtdayData]  = formHook(birtday);
+        const [educationStateData,changeEducationStateData,,changeNormalEducationStateData]  = formHook(educationState);
          
         const handelEdit = async () => {
                 await editUser(id,{firstName:firstNameData,lastName:lastNameData,
                     gender:genderData,birtday:birtdayData,educationState:educationStateData,id,password,email,userType})
                 changeEditState(false)    
+        }
+
+        const handelBack = async () => {
+              changeNormalFirstNameData(firstName)
+              changeNormalLastNameData(lastName)
+              changeNormalGenderData(gender)
+              changeNormalBirtdayData(birtday)
+              changeNormalEducationStateData(educationState)
+              changeEditState(!isEdit)
         }
 
         return <tr>
@@ -38,7 +47,23 @@ export default ({props,deleteUser,editUser}) => {
                                <option value="university">University</option>
                                </select>
                     : educationState.toUpperCase()}</td>
-                   <td>{isEdit ? <i onClick={handelEdit} className="fa-solid fa-check"/> : <i onClick={() => {changeEditState(true)}} className="fa-regular fa-pen-to-square"/> }</td> 
-                   <td> <i onClick={deleteUser} className="fa-solid fa-trash" /> </td>
+                   {isEdit ?
+                    <>
+                       <td>
+                       <i onClick={handelEdit} className="fa-solid fa-check"/>
+                       </td>
+                       <td>
+                       <i onClick={handelBack} class="fa-solid fa-circle-arrow-left"/>
+                       </td>
+                    </>
+                    : 
+                    <>
+                      <td>
+                      <i onClick={() => {changeEditState(true)}} className="fa-regular fa-pen-to-square"/>
+                      </td>
+                      <td>
+                      <i onClick={deleteUser} className="fa-solid fa-trash" />   
+                      </td>
+                    </> } 
                </tr>
 }

@@ -11,14 +11,14 @@ export default props => {
       const [userData,changeUserData] = useState({})
       const initVal = window.localStorage.getItem("id") === null ? "" : window.localStorage.getItem("id");
       const [isLoad,changeLoad] = toggleHook(true)
-      const [firstName,changeFirstName,resetFirstName,changeFirstNormal] = formHook("");
-      const [lastName,changeLastName,resetLastName,changeLastNormal] = formHook("");
-      const [email,changeEmail,resetEmail,changeEmailNormal] = formHook("");
-      const [password,changePassword,resetPassword,changePasswordNormal] = formHook("");
-      const [gender,changeGender,resetGender,changeGenderNormal] = formHook("other");
-      const [userType,changeUserType,resetUserType,changeUserTypeNormal] = formHook("");
-      const [birtday,changeBirtday,resetBirtday,changeBirtdayNormal] = formHook("");
-      const [educationState,changeEducationState,resetEducationState,changeEducationNormal] = formHook("other");
+      const [firstName,changeFirstName,,changeFirstNormal] = formHook("");
+      const [lastName,changeLastName,,changeLastNormal] = formHook("");
+      const [email,changeEmail,,changeEmailNormal] = formHook("");
+      const [password,changePassword,,changePasswordNormal] = formHook("");
+      const [gender,changeGender,,changeGenderNormal] = formHook("other");
+      const [userType,changeUserType,,changeUserTypeNormal] = formHook("");
+      const [birtday,changeBirtday,,changeBirtdayNormal] = formHook("");
+      const [educationState,changeEducationState,,changeEducationNormal] = formHook("other");
       
       useEffect(() => {
                  console.log("id : "+initVal)
@@ -48,7 +48,6 @@ export default props => {
              console.log("after  updateUser")
              changeLoad(false)     
              console.log("isLoad : "+isLoad)
-            
        }  
        
       return isLoad ? <Loader /> : <div className="row justify-content-center">

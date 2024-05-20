@@ -26,7 +26,6 @@ import { v4 as uuidv4 } from 'uuid';
                     let tmpData = {};
                     const getData = async () => {
                      tmpData = await getUser(window.localStorage.getItem("id"))
-                    console.log(`firstName : ${tmpData.firstName} --- lastName : ${tmpData.lastName} `)
                     changeUserData(tmpData)
                 }  
                 getData()

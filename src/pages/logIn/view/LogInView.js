@@ -43,7 +43,9 @@ export default props => {
                    }
                    catch(e)
                    {
+                       changeLoad(false)
                        console.log("errorr : "+e.toString())
+                       alert("DONT HAVE AN ACCOUNT")
                    }
          } 
         
@@ -52,8 +54,8 @@ export default props => {
        }
 
         return isLoad ? < Loader /> : <div className="row justify-content-center mr-2">
-        <div className="col-6 align-self-center">
-              <img src={`${logInImg}`} alt="logInImg" className="img-fluid" ></img>
+        <div className="col-6 align-self-center ">
+              <img src={`${logInImg}`} alt="logInImg" className="img-fluid" style={{marginTop:"10vh"}}></img>
         </div>
         <div className="col-6">
                   <div className="row mt-3">
@@ -63,7 +65,7 @@ export default props => {
                   </div>
                   <form onSubmit={handelSubmit} className="row justify-content-center">
                       <div className="col-2"></div>
-                      <div className="col-8 mt-5">
+                      <div className="col-8 " style={{marginTop:"20vh"}}>
                                <label htmlFor="email" className="form-label" >EMAIL</label>
                                <input onChange={e => {changeEmail(e)}} type="email" id="email" name="email" value={email} className="form-control" />
                       </div>

@@ -12,10 +12,10 @@ export default ({props,handelLike,handelDisLike,isLiked}) => {
                 const disLikedId = window.localStorage.getItem("id");
                 await handelDisLike(id,{...props,like:[...like.filter(likerId => {
                               if(likerId !== disLikedId)
-                                {
+                                {      
                                      return true
                                 }
-                                 return false 
+                                     return false 
                 })]}) 
 
       }

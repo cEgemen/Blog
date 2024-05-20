@@ -6,8 +6,8 @@ import formHook from "../../../../hooks/formHook"
 export default ({props,handelDelete,handelUpdate}) => {
        const {like,date,blogType,title,content,id} = props
        const [isEdit,changeEdit] = toggleHook(false)
-       const [titleData,changeTitleData] = formHook(title)
-       const [contentData,changeContentData] = formHook(content)
+       const [titleData,changeTitleData,,changeNormalTitleData] = formHook(title)
+       const [contentData,changeContentData,,changeNormalContentData] = formHook(content)
        
        const update = () => {
               const newBlogData = {...props,title:titleData,content:contentData}
@@ -21,6 +21,8 @@ export default ({props,handelDelete,handelUpdate}) => {
        }
 
        const handelBack = () => {
+                changeNormalTitleData(title);
+                changeNormalContentData(content)
                 changeEdit(false)
        }
        

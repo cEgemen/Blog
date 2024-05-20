@@ -5,8 +5,7 @@ import {createUserWithEmailAndPassword,deleteUser,signInWithEmailAndPassword,sig
 const signIn = async (name , email , password) => {
      const user =  await createUserWithEmailAndPassword(auth,email,password)
      console.log("user.id : "+user.user.uid);
-/*      await updateCurrentUser(auth,{displayName:name});
- */     return user.user.uid;
+     return user.user.uid;
 }
 
 const logIn =async (email,password) => {

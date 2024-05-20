@@ -55,7 +55,7 @@ export default props => {
          :
           <div className="row justify-content-center mr-2">
         <div className="col-6 align-self-center" >
-                   <img src={`${signInImg}`} alt="signInImage" className="img-fluid"></img>
+                   <img src={`${signInImg}`} alt="signInImage" className="img-fluid" style={{marginTop:"22vh"}}></img>
         </div>
         <div className="col-6">
                   <div className="row mt-3">
