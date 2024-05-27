@@ -30,6 +30,8 @@ This project provides a platform where users can write, read, and manage blog po
   - When you start the project, you will first encounter the login or registration page.
   - If you are a new user, you can create an account by filling out the registration form.
   - If you already have an account, you can log in to continue.
+![Alt Text](images/RegisterScreen.png)
+![Alt Text](images/LoginScreen.png)
 
 ### 2. Homepage
 
@@ -38,15 +40,18 @@ After logging in, you will be directed to different homepages depending on your 
 - **Reader:**
   - Once logged in, you will be directed to a page listing the blogs you can read.
   - You can filter blogs by category.
+  - ![Alt Text](images/ReaderScreen.png)
 
 - **Writer:**
   - Once logged in, you will be directed to a page where you can add new blog posts.
   - You can write blogs based on the category of your choice.
   - You can edit or delete the blogs you have previously written.
+  - ![Alt Text](images/WriterScreen.png)
 
 - **Admin:**
   - As an admin, you will have access to a control panel where you can manage all blogs and users.
   - You have full authority over all content and users.
+  - ![Alt Text](images/AdminScreen.png)
 
 ### 3. User Profile
 
@@ -72,7 +77,7 @@ After logging in, you will be directed to different homepages depending on your 
   - You can manage user account information and change user types.
 - **Admin Login:**
   - Use the following credentials to log in as an admin:
-    - **Username:** admin
-    - **Password:** admin
+    - **Username:** admin@gmail.com
+    - **Password:** 123123
 
 By following these steps, you can efficiently use and manage the project. If you encounter any issues or need more information, please refer to the project documentation.
