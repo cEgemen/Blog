@@ -1,6 +1,6 @@
 # Project Overview
 
-Our project is a blog site. The site's programming is done with JavaScript , the interface is designed with React , and database operations are handled with Firebase. The project includes features such as UI design, Object-Oriented Programming, Object-Relational Mapping, Web Service connection, Role-Based Access, and User authentication. Users on the site are divided into three categories: authors, readers, and admins. Authors can add text content to the site and delete the content they have added. Admins have authority over all content. Readers can only read the published content.
+Our project is a blog site. The site's programming is done with JavaScript , the interface is designed with React and database operations are handled with Firebase. The project includes features such as UI design, Object-Oriented Programming, Object-Relational Mapping, Web Service connection, Role-Based Access, and User authentication. Users on the site are divided into three categories: authors, readers, and admins. Authors can add text content to the site and delete the content they have added. Admins have authority over all content. Readers can only read the published content.
 
 ## Steps to Work with GitHub Codespaces
 
@@ -81,3 +81,8 @@ After logging in, you will be directed to different homepages depending on your 
     - **Password:** 123123
 
 By following these steps, you can efficiently use and manage the project. If you encounter any issues or need more information, please refer to the project documentation.
+
+## Creators
+-Egemen Çakır  200201052
+-Halil Asav  210201097
+-Yusuf Demir  210201009
